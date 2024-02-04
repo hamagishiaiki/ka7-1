@@ -3,8 +3,12 @@
     <head>
         <meta charset="utf-8">
         <title>Blog</title>
+        
+        <!-- Fonts -->
+        <link href="https*//fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        
     </head>
-    <body>
+    <body class="antialiased">
         <h1>Blog Name</h1>
         <form action="/posts" method="POST">
             @csrf
@@ -16,7 +20,7 @@
                 <h2>Body</h2>
                 <textarea name="post[body]" placeholder="今日も1日お疲れさまでした。"></textarea>
             </div>
-            <input type="submit" value="store"/>
+            <input type="submit" value="store">
         </form>
         <div class="footer">
             <a href="/">戻る</a>
