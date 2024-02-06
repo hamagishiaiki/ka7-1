@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\PostRequest; 
 use App\Post;
 
 class PostController extends Controller
@@ -18,6 +19,12 @@ class PostController extends Controller
     public function create()
     {
         return view('posts.create');
+    }
+      public function store(PostRequest $request, Post $post)
+    {
+        $input = $request['post'];
+        $post->fill($input)->save();
+        return redirect('/posts/' . $post->id);
     }
     public function edit(Post $post)
     {
