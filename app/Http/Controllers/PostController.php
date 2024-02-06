@@ -20,7 +20,7 @@ class PostController extends Controller
     {
         return view('posts.create');
     }
-      public function store(PostRequest $request, Post $post)
+      public function store(Post $post, PostRequest $request)
     {
         $input = $request['post'];
         $post->fill($input)->save();
@@ -30,7 +30,7 @@ class PostController extends Controller
     {
         return view('posts.edit')->with(['post' => $post]);
     }
-    public function update(PostRequest $request, Post $post)
+    public function update(Post $post, PostRequest $request)
     {
         $input_post = $request['post'];
         $post->fill($input_post)->save();
