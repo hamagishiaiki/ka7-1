@@ -15,7 +15,7 @@
             </div>
             <div class="body">
                 <h2>Body</h2>
-                <textarea name="post[body]" placeholder="今日も1日お疲れさまでした。">{{ $post=>body }}</textarea>
+                <textarea name="post[body]" placeholder="今日も1日お疲れさまでした。">{{ $post->body }}</textarea>
             </div>
             <input type="submit" value="update"/>
         </form>
